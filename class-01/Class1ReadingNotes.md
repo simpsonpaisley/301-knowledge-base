@@ -94,3 +94,75 @@ We can then add the component to the hierachy of the pages, using the following 
 ### Classes in React
 
 In React, instead of using the attribute `class="style"` on elements, we need to use `className="style"`.
+
+We can then use the class names in the CSS stylesheet that has been imported to the component.
+
+### Multiple Elements in a Component
+
+The `return` function can only handle one element at a time.
+
+The following code will not work:
+
+```javascript
+function Component(){
+    return <h1>Heading</h1>
+            <p>Paragraph</p>
+}
+```
+
+To combat this, when we need more than one element in a component, we can nest the elements inside a `<div>` tag.
+
+`return` will then consider the `div` and everything inside it as one single element.
+
+You also need to contain the `div` inside parenthesis, as below:
+
+```javascript
+function Component() {
+	return (
+		<div>
+			<h1>Heading</h1>
+			<p>Paragraph</p>
+		</div>
+	);
+}
+```
+
+### Props
+
+**Props** is short for properties. These are properties given to a child component from a parent.
+
+This data is read only.
+
+We can send a property from a parent component to a particular child element, using the following code:
+
+```javascript
+<Child message="message here" />
+```
+
+This will send the message as an object, called `props`.
+
+We can then access this in the child component using the following:
+
+```javascript
+function Child(props) {
+	console.log(props); // This will return {message: "message here"} in the console.
+
+	console.log(props.message); // This will return "message here" in the console.
+}
+```
+
+You can send multiple properties using this, as they will be stored in an object, from which the individual key-value pairs can be accessed by dot notation.
+
+These can then be used in the component to create dynamic content, by using flower brackets `{}` inside the HTML.
+
+The flower brackets can be used on any dynamic content, not just props.
+
+```javascript
+function Child(props) {
+	return (
+		<div>
+			<p>{props.message}</p>
+		</div>
+	);
+} // This will create a paragraph containing the text "message here".
+```
