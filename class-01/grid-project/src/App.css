@@ -1,0 +1,28 @@
+.square {
+	background-color: #f9ca24;
+	height: 20vh;
+	width: 20vw;
+	border: 5px solid #f6e58d;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.row {
+	display: flex;
+	gap: 10px;
+}
+
+.grid {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.App {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}

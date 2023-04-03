@@ -45,7 +45,13 @@ npx create-react-app app-name
 
 ```
 
+'npx' means Node Package Execute.
+
 This will create a folder in the current directory containing the default template React files.
+
+If we accidentally delete the dependencies, we can use the command `npm install` in the terminal to reinstall the dependencies.
+
+We can also delete the node modules folder to save space when not using the application.
 
 We can then use `npx start` to start the application.
 
@@ -55,6 +61,10 @@ We can then use `npx start` to start the application.
 - **`public`** - this folder contains `index.html` file, which is the template for the React project.
 - **`src`** - this folder contains the components of the React app.
 - **`package.json`** - this contains the npm package details.
+
+### Git Ignore
+
+We can write files in the `gitignore` file, so they don't get pushed to GitHub.
 
 ### Creating a Component
 
@@ -166,3 +176,24 @@ function Child(props) {
 	);
 } // This will create a paragraph containing the text "message here".
 ```
+
+### Destructuring
+
+If we have an object, for example:
+
+```javascript
+const objectOne = {
+	keyOne: 'valueOne',
+	keyTwo: 'valueTwo',
+	keyThree: 'valueThree',
+	keyFour: 'valueFour',
+};
+```
+
+We can use the following code to deconstruct it:
+
+```javascript
+const { keyOne, keyThree } = objectOne;
+```
+
+This will create a new object, which
