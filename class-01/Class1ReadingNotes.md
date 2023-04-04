@@ -196,4 +196,28 @@ We can use the following code to deconstruct it:
 const { keyOne, keyThree } = objectOne;
 ```
 
-This will create a new object, which
+This will create a new object, which contains the values from the other object.
+
+We can then get the value for `keyOne` by calling `keyOne`.
+
+## GitHub
+
+### Adding a GitHub Repo from Local Machine
+
+When we have made a project on out computer, but not already made a repo on GitHub, we can initialise the folder the project is in using the command `git init`.
+
+If we are making a React project, this is automatically done if we create the app using `npx create-react-app`.
+
+We can then go into GitHub on the browser, and create a new repository with the same name as our project. You shouldn't add a README.md.
+
+We can then use the following command in our terminal, while in the root folder of our project:
+
+`git remote add origin <repolink>`
+
+We can then use the following command, which changes the name of the `master` branch to `main`.
+
+`git branch -M main`
+
+We can then use the push command, to push the local files to the remote repo.
+
+`git push -u origin main`
