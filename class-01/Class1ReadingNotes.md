@@ -196,9 +196,7 @@ We can use the following code to deconstruct it:
 const { keyOne, keyThree } = objectOne;
 ```
 
-This will create a new object, which contains the values from the other object.
-
-We can then get the value for `keyOne` by calling `keyOne`.
+This will create a new variables, called keyOne and keyThree, who's values are the value of their respective keys in the objectOne object.
 
 ## GitHub
 
