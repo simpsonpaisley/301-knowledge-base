@@ -89,8 +89,28 @@ array.forEach((item) => {
 A `map` function which can be also be used to loop through an array. Unlike `forEach`, `map` will go through the array, and run the function script on each value in the array.
 
 ```javascript
+myArray = ['val1', 'val2', 'val3', 'val4'];
+
+myArray.map(function (item) {
+	console.log(item);
+});
+```
+
+This will render the following in the console:
+
+```javascript
+'val1';
+'val2';
+'val3';
+```
+
+In React using destructuring:
+
+```javascript
 
 array.map(({val1, val2, val3}) => (
     //script
 ));
 ```
+
+### Passing Functions to Child Components
